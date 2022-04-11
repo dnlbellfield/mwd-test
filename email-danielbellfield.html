@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no"> <!-- Tell iOS not to automatically link certain text strings. -->
+    <meta name="color-scheme" content="light">
+    <meta name="supported-color-schemes" content="light">
+    <title>Children's Rights</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+    <!-- HTML Email Test // 2022-03-23, MWD -->
+
+    <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+
+    <!-- Web Font / @font-face : BEGIN -->
+    <!-- NOTE: If web fonts are not required, lines 23 - 41 can be safely removed. -->
+
+    <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+    <!--[if mso]>
+        <style>
+            * {
+      font-family: Helvetica, Arial, Helvetica, Arial, sans-serif !important;
+            }
+        </style>
+    <![endif]-->
+
+    <!-- CSS Reset : BEGIN -->
+    <style>
+
+        /* What it does: Tells the email client that only light styles are provided but the client can transform them to dark. A duplicate of meta color-scheme meta tag above. */
+        :root {
+          color-scheme: light;
+          supported-color-schemes: light;
+        }
+
+        /* What it does: Remove spaces around the email design added by some email clients. */
+        /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+        }
+
+        /* What it does: Stops email clients resizing small text. */
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* What it does: Centers email on Android 4.4 */
+        div[style*="margin: 16px 0"] {
+            margin: 0 !important;
+        }
+
+        /* What it does: forces Samsung Android mail clients to use the entire viewport */
+        #MessageViewBody, #MessageWebViewDiv{
+            width: 100% !important;
+        }
+
+        /* What it does: Stops Outlook from adding extra spacing to tables. */
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+
+        /* What it does: Replaces default bold style. */
+        th {
+        	font-weight: normal;
+        }
+
+        /* What it does: Fixes webkit padding issue. */
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+
+        /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+        a {
+            text-decoration: none;
+        }
+
+        /* What it does: Uses a better rendering method when resizing images in IE. */
+        img {
+            -ms-interpolation-mode:bicubic;
+        }
+
+        /* What it does: A work-around for email clients meddling in triggered links. */
+        a[x-apple-data-detectors],  /* iOS */
+        .unstyle-auto-detected-links a,
+        .aBn {
+            border-bottom: 0 !important;
+            cursor: default !important;
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        /* What it does: Prevents Gmail from changing the text color in conversation threads. */
+        .im {
+            color: inherit !important;
+        }
+
+        /* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+        .a6S {
+           display: none !important;
+           opacity: 0.01 !important;
+		}
+		/* If the above doesn't work, add a .g-img class to any image in question. */
+		img.g-img + div {
+		   display: none !important;
+		}
+
+		h1,
+            h2,
+            h3,
+            p{
+			margin: 0;
+			padding: 0;
+			}
+
+        /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+        /* Create one of these media queries for each additional viewport size you'd like to fix */
+
+        /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+        @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+            u ~ div .email-container {
+                min-width: 320px !important;
+            }
+        }
+        /* iPhone 6, 6S, 7, 8, and X */
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+            u ~ div .email-container {
+                min-width: 375px !important;
+            }
+        }
+        /* iPhone 6+, 7+, and 8+ */
+        @media only screen and (min-device-width: 414px) {
+            u ~ div .email-container {
+                min-width: 414px !important;
+            }
+        }
+
+    </style>
+    <!-- CSS Reset : END -->
+
+    <!-- Progressive Enhancements : BEGIN -->
+    <style>
+
+        /* What it does: Hover styles for buttons */
+        .button-td,
+        .button-a {
+            transition: all 100ms ease-in;
+        }
+	    .button-td-primary:hover,
+	    .button-a-primary:hover {
+	        background: #555555 !important;
+	        border-color: #555555 !important;
+	    }
+
+        /* Media Queries */
+        @media screen and (max-width: 600px) {
+
+            .email-container {
+                width: 100% !important;
+                margin: auto !important;
+            }
+
+            /* What it does: Forces table cells into full-width rows. */
+            .stack-column,
+            .stack-column-center {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                direction: ltr !important;
+            }
+            /* And center justify these ones. */
+            .stack-column-center {
+                text-align: center !important;
+            }
+
+            /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+            .center-on-narrow {
+                text-align: center !important;
+                display: block !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                float: none !important;
+            }
+            table.center-on-narrow {
+                display: inline-block !important;
+            }
+
+			.email-container h1{
+				font-size: 30px !important;
+			}
+
+            /* What it does: Adjust typography on small screens to improve readability */
+            .email-container p, .email-container p a {
+                font-size: 20px !important;
+                line-height: 26px !important;
+            }
+
+        }
+
+        /* Dark Mode Styles : BEGIN */
+        @media (prefers-color-scheme: dark) {
+            .email-bg {
+                background: #000000 !important;
+            }
+            .darkmode-bg {
+                background: #262626 !important;
+            }
+            h1,
+            h2,
+            h3,
+            p,
+            li,
+            .darkmode-text,
+            .email-container a:not([class]) {
+                color: #F7F7F9 !important;
+            }
+            td.button-td-primary,
+            td.button-td-primary a {
+                background: #2b6f96 !important;
+                border-color: #2b6f96 !important;
+                color: #ffffff !important;
+            }
+            td.button-td-primary:hover,
+            td.button-td-primary a:hover {
+                background: #2b6f96 !important;
+                border-color: #2b6f96 !important;
+            }
+            td.footer {
+                color: #cdcdcd !important;
+            }
+            .darkmode-fullbleed-bg {
+                background-color: #0F3016 !important;
+            }
+
+			/* Shows Dark Mode-Only Content, Like Images */
+			.dark-img {
+                display: block !important;
+            }
+
+            /* Hides Light Mode-Only Content, Like Images */
+            .light-img {
+                display: none !important;
+            }
+
+        }
+        /* Dark Mode Styles : END */
+    </style>
+    <!-- Progressive Enhancements : END -->
+
+</head>
+
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #ffffff;" class="email-bg">
+  <center role="article" aria-roledescription="email" lang="en" style="width: 100%; background-color: #ffffff;" class="email-bg">
+    <!--[if mso | IE]>
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #ffffff;" class="email-bg">
+    <tr>
+    <td>
+    <![endif]-->
+
+        <!-- Visually Hidden Preheader Text : BEGIN -->
+        <div style="max-height:0; overflow:hidden; mso-hide:all;" aria-hidden="true">
+          Make your monthly gift now
+        </div>
+        <!-- Visually Hidden Preheader Text : END -->
+
+        <!-- Create white space after the desired preview text so email clients don&#8217;t pull other distracting text into the inbox preview. Extend as necessary. -->
+        <!-- Preview Text Spacing Hack : BEGIN -->
+        <div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: Helvetica, Arial, sans-serif;">
+            &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+        </div>
+        <!-- Preview Text Spacing Hack : END -->
+
+        <!-- Email Body : BEGIN -->
+        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="680" style="margin: auto; background-color: #ffffff;" class="email-container">
+	        <!-- Email Header : BEGIN -->
+            <tr>
+                <td style="padding: 20px 0; text-align: center" class="darkmode-bg">
+					<a href="https://placeholder.com"><img src="images/Rapid_Response_Template.png" alt="Children's Rights logo" width="200" style="width: 200px; max-width: 200px; display: block; Margin: 0 auto;" class="m-responsive" /></a>
+                </td>
+            </tr>
+	        <!-- Email Header : END -->
+
+			<!-- 1 Column Text + Button : BEGIN -->
+			<tr>
+				<td style="background-color: #ffffff; padding: 20px 0 0" class="darkmode-bg">
+					<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+						<tr>
+							<td align="center" style="padding: 30px 0; background-color: #2b6f96;">
+								<h1 style="margin: 0px; font-size: 30px; font-family: Helvetica, Arial, sans-serif; line-height: 1.2; color: #ffffff; font-weight: bold; text-align: center; text-transform: none;">
+									Your Supporter Record</h1>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<!-- 1 Column Text + Button : END -->
+            
+            <!-- Callout : BEGIN -->
+            <tr>
+                <td style="background-color: #ffffff; padding:  0" class="darkmode-bg">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                            <td style="border-left: 2px solid #2b6f96; padding: 20px 1% 0 5%;" align="left">
+                                <p style="margin:0px; font-family: Helvetica, Arial, sans-serif; font-size:16px; line-height:24px; color: #6e6e70; font-weight: bold;">Name:</p>
+                            </td>
+                            <td style="border-right: 2px solid #2b6f96; padding: 20px 5% 0 1%;" align="left">
+                                <p style="margin:0px; font-family: Helvetica, Arial, sans-serif; font-size:16px; line-height:24px; color: #6e6e70; font-weight: bold;">Our Valued Children&rsquo;s Right Supporter</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: 2px solid #2b6f96; padding: 20px 1% 0 5%" align="left">
+                                <p style="margin:0px; font-family: Helvetica, Arial, sans-serif; font-size:16px; line-height:24px; color: #6e6e70; font-weight: bold;">Constituent ID:</p>
+                            </td>
+                            <td style="border-right: 2px solid #2b6f96; padding: 20px 5% 0 1%;" align="left">
+                                <p style="margin:0px; font-family: Helvetica, Arial, sans-serif; font-size:16px; line-height:24px; color: #6e6e70; font-weight: bold;">1047340</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: 2px solid #2b6f96; padding: 20px 1% 0 5%" align="left">
+                                <p style="margin:0px; font-family: Helvetica, Arial, sans-serif; font-size:16px; line-height:24px; color: #6e6e70; font-weight: bold;">Monthly Giving Donor Status:</p>
+                            </td>
+                            <td style="border-right: 2px solid #2b6f96; padding: 20px 5% 0 1%;" align="left">
+                                <img src="images/pending_186x50.png" alt="PENDING" style="display: block; width: 100%; max-width: 186px; height: auto;" width="186" height="auto">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border-left: 2px solid #2b6f96; padding: 20px 1% 20px 5%;" align="left">
+                                <p style="margin:0px; font-family: Helvetica, Arial, sans-serif; font-size:16px; line-height:24px; color: #6e6e70; font-weight: bold;">Deadline:</p>
+                            </td>
+                            <td style="border-right: 2px solid #2b6f96; padding: 20px 5% 20px 1%;" align="left">
+                                <p style="margin:0px; font-family: Helvetica, Aßrial, sans-serif; font-size:16px; line-height:24px; color: #6e6e70; font-weight: bold;">February 24, 2022</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="center" style="border-right: 2px solid #2b6f96; border-left: 2px solid #2b6f96;">
+                                <!-- Button : BEGIN -->
+                                <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" style=" margin: 0 auto;">
+                                    <tr>
+                                        <td align="center" valign="middle" class="button-td button-td-primary" style="border-radius: 10px; background: #2b6f96; padding: 15px 30px;">
+                                            <a class="button-a button-a-primary" href="https://placeholder.com?s_src=test123" style="background: #2b6f96; font-family: Helvetica, Arial, sans-serif; font-size: 22px; line-height: 1.2; font-weight: bold; text-decoration: none; color: #ffffff; border-radius: 10px; text-align: center;">GIVE MONTHLY</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- Button : END -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center"   style="border-right: 2px solid #2b6f96; border-left: 2px solid #2b6f96; border-bottom: 2px solid #2b6f96;" colspan="2">
+                                &nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <!-- Callout : END -->
+
+            <!-- 1 Column Text + Button : BEGIN -->
+            <tr>
+                <td class="darkmode-bg" align="center">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="580" style="width: 100%; max-width: 580px;">
+                        <!-- Therm : BEGIN -->
+                        <tr>
+                            <td style="padding: 30px 20px 0" align="center">
+                                <img src="images/sus5_therm_540x32.png" alt="Goal thermometer" width="540" height="auto" style="width: 100%; max-width: 540px; height: auto; display: block">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" style="padding: 10px 20px 0">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                        <td width="60%" align="left">
+                                            <p style="margin:0px; font-family: Helvetica, Arial, sans-serif; font-size:16px; line-height:24px; color: #6e6e70;"><strong>New Champions:</strong> 20</p>
+                                        </td>
+                                        <td width="40%" align="right">
+                                            <p style="margin:0px; font-family: Helvetica, Arial, sans-serif; font-size:16px; line-height:24px; color: #6e6e70;"><strong>Goal:</strong> 25</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- Therm : END -->
+                        <tr>
+                            <td style="padding: 30px 20px">
+                                <p style="margin:0px; font-family: Helvetica, Arial, sans-serif; font-size:16px; line-height:24px; color: #6e6e70;">
+									 Friend &#8211; our records <a  href="https://placeholder.com?s_src=test123" style="color: #2b6f96; text-decoration: underline; font-size:16px; line-height:24px; font-weight: bold;" class="link">indicate you haven&rsquo;t yet confirmed your status as a Children&rsquo;s Rights Champion.</a><br /><br />
+
+                                    As we close in on the February 24 deadline for new monthly donors, we look to community members like you to help ensure a fair future for the kids who need us more than ever. <a  href="https://placeholder.com?s_src=test123" style="color: #2b6f96; text-decoration: underline; font-size:16px; line-height:24px; font-weight: bold;" class="link">Help keep up the fight for children&rsquo;s rights by becoming a monthly donor today.</a><br /><br />
+                                    
+                                    Begin your monthly gift today and your generosity will be MATCHED with an additional $100 in funding from one of our generous supporters. <a style="color: #2b6f96; text-decoration: underline; font-size:16px; line-height:24px; font-weight: bold;" class="link"  href="https://placeholder.com?s_src=test123">Become a Children&rsquo;s Rights Champion today.</a></p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <!-- 1 Column Text + Button : END -->
+   
+			<!-- Button : BEGIN -->
+            <tr>
+                <td align="center" style="padding: 0 0px 10px 0px;" class="darkmode-bg">
+                    <!-- Button : BEGIN -->
+                    <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" style=" margin: 0 auto;">
+                        <tr>
+                            <td align="center" valign="middle" class="button-td button-td-primary" style="border-radius: 10px; background: #2b6f96; padding: 15px 30px;">
+                                <a class="button-a button-a-primary"  href="https://placeholder.com?s_src=test123" style="background: #2b6f96; font-family: Helvetica, Arial, sans-serif; font-size: 22px; line-height: 1.2; font-weight: bold; text-decoration: none; color: #ffffff; border-radius: 10px; text-align: center;">GIVE MONTHLY</a>
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- Button : END -->
+                </td>
+            </tr>
+			<!-- Button : END -->
+	        <!-- Clear Spacer : BEGIN -->
+	        <tr>
+	            <td aria-hidden="true" height="40" style="font-size: 0px; line-height: 0px;" class="darkmode-bg">
+	                &nbsp;
+	            </td>
+	        </tr>
+	        <!-- Clear Spacer : END -->
+
+	    </table>
+	    <!-- Email Body : END -->
+
+		<!-- Email Footer : BEGIN -->
+		<table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="680" style="max-width: 680px;" class="email-container">
+
+            <tr>
+                <td align="center"  style="background-color: #6e6e70;">
+                    <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" class="email-container">
+			<!-- Social Icons: START -->
+			<tr>
+				<td align="center" style="padding: 20px 0px 20px 0px; ">
+					<table align="center" width="290" border="0" cellspacing="0" cellpadding="0" style="width: 290px;">
+						<tbody>
+							<tr>
+								<td align="center" style="width: 45px; height: auto;">
+									<a href="https://placeholder.com"><img src="images/CRI_2021_Footer_FB.png" border="0" alt="Facebook" style="display: block;" hspace="2" width="45" height="auto" /></a>
+								</td>
+								<td align="center" style="width: 45px; height: auto;">
+									<a href="https://placeholder.com"><img src="images/CRI_2021_Footer_Twitter.png" border="0" alt="Twitter" style="display: block;" hspace="2" width="45" height="auto" /></a>
+								</td>
+								<td align="center" style="width: 45px; height: auto;">
+									<a href="https://placeholder.com"><img src="images/CRI_2021_Footer_instagram.png" border="0" alt="Instagram" style="display: block;" hspace="2" width="45" height="auto" /></a>
+								</td>
+								<td align="center" style="width: 45px; height: auto;">
+									<a href="https://placeholder.com"><img src="images/CRI_2021_Footer_LinkedIn.png" border="0" alt="LinkedIn" style="display: block;" hspace="2" width="45" height="auto" /></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<!-- Social Icons: END -->
+            <!-- Footer Address: START -->
+			<tr>
+				<td align="center" valign="middle"
+					style="padding: 0px 10px 10px 10px; font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height:18px; color: #ffffff; font-weight: normal; text-align: center !important;">
+					National Headquarters | 88 Pine Street #800, New York, NY 10005
+					<br />
+				</td>
+			</tr>
+			<tr>
+				<td  align="center" valign="middle"
+					style="padding: 10px 10px 0px 10px; font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height:18px; color: #ffffff; font-weight: normal; text-align: center;">
+					Children&rsquo;s Rights &copy; 2022 All rights reserved.
+				</td>
+			</tr>
+			<!-- Footer Address: End -->
+			<tr>
+				<td  align="center" valign="middle"
+					style="padding: 0px 10px 30px; font-family:Arial, Helvetica, sans-serif;font-size:13px;line-height:20px;color:#ffffff;font-weight:normal; text-align: center !important;" class="">
+					<a href="https://placeholder.com" style="color:#ffffff;font-weight:normal;text-decoration:underline;font-family: Arial, Helvetica, sans-serif;font-size: 13px; line-height: 20px;">Unsubscribe</a> | <a href="https://placeholder.com" style="color:#ffffff;font-weight:normal;text-decoration:underline;font-family: Arial, Helvetica, sans-serif;font-size: 13px; line-height: 20px;">View in&nbsp;Browser</a> | <a style="color: #ffffff; text-decoration: underline;" href="https://placeholder.com" target="_blank">Donate</a>
+				</td>
+			</tr>
+			<!-- Footer Links: END -->
+                </table>
+                </td>
+            </tr>
+
+			<!-- Sub-footer : BEGIN -->
+			<tr>
+				<td style="background-color: #ffffff; padding: 0 20px;" class="darkmode-bg" align="center">
+					<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="540" style="width: 100%; max-width: 540px; margin: 0 auto;" align="center">
+						<tr>
+							<td style="font-family: Helvetica, Arial, sans-serif; font-size:12px; line-height:16px; color: #6e6e70;  padding: 20px 0;" align="center" class="footer">
+								You can request a copy of our most recently filed financial report from the
+								Charities Bureau Registry on the New York Attorney General&#8217;s website (<a href="mailto:https://placeholder.com" style="color: #2b6f96; text-decoration: underline;">https://www.charitiesnys.com/</a>)
+								or by contacting us: Children&#8217;s Rights, 88 Pine Street #800, NYC, NY 10005, <a href="mailto:development@childrensrights.org" style="color: #2b6f96; text-decoration: underline;">development@childrensrights.org</a>
+								or New York State Attorney General, Department of Law, Charities Bureau, 28 Liberty
+								Street, New York, NY 10005. Information on New York charitable organizations can be
+								found on the New York Attorney General&#8217;s website (<a href="https://placeholder.com" style="color: #2b6f96; text-decoration: underline;">https://www.charitiesnys.com/</a>) or by contacting (929) 352.4697. Your contribution will be used to support legal action and advocacy.
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<!-- Sub-footer : END -->
+		</table>
+		<!-- Footer : END -->
+
+    <!--[if mso | IE]>
+    </td>
+    </tr>
+    </table>
+    <![endif]-->
+    </center>
+</body>
+</html>
